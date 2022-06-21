@@ -1,0 +1,138 @@
+﻿<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<!-- 
+THEME: Kross - Creative Portfolio Template
+VERSION: 1.0.0
+AUTHOR: Themefisher
+
+HOMEPAGE: https://themefisher.com/products/kross-creative-portfolio-template/
+DEMO: https://demo.themefisher.com/kross/
+GITHUB: https://github.com/themefisher/meghna-onepage-html5-business-template
+
+Get HUGO Version : https://gethugothemes.com/products/kross-hugo-theme/
+
+WEBSITE: https://themefisher.com
+TWITTER: https://twitter.com/themefisher
+FACEBOOK: https://www.facebook.com/themefisher
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Josh Christian Developer</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Creative Portfolio Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Kross Template v1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.png" />
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="~/plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="~/plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="~/plugins/themify-icons/themify-icons.css">
+
+  <!-- Main Stylesheet -->
+  <link href="~/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="~/css/custom.css">
+
+</head>
+<body>
+  
+
+<header class="navigation fixed-top navbarbg">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="~/images/icons/PersonalLogosm.png" alt="Myself"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="@Url.Action("Index","Home")">Home</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="@Url.Action("About","Home")">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="@Url.Action("Blog","Home")">Classmates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="@Url.Action("Portfolio","Home")">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="@Url.Action("ContactMe","StronglyTypedData")">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+@RenderBody()
+
+<!-- footer -->
+  <footer class="bg-dark">
+  <div class="border-top text-center border-dark py-5">
+    <p class="mb-0 text-light">Copyright &copy;<script>
+        var CurrentYear = new Date().getFullYear()
+        document.write(CurrentYear)
+      </script> Designed by <a class="text-white-50" href="Themefisher">Themefisher</a></p>
+      <p>Customized by Josh Christian</p>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="~/plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="~/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="~/plugins/slick/slick.min.js"></script>
+<!-- filter -->
+<script src="~/plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+<script src="~/js/script.js"></script>
+<script>
+var i = 0;
+  var txt = 'Full Stack Developer'; /* The text */
+  var speed = 100; /* The speed/duration of the effect in milliseconds */
+  
+ setInterval(function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("typing").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  },2000)</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  @*@RenderSection("scripts", required: false)*@
+
+</body>
+</html>
